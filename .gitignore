@@ -1,5 +1,4 @@
 
-*/.ipynb_checkpoints/*
-.ipynb_checkpoints/main-checkpoint.ipynb
+*checkpoint*
 *.html
-.ipynb_checkpoints/README-checkpoint.md
+*.pyc
