@@ -1,5 +1,9 @@
 # Homework 3 - Search Engines
 
+[![Button Icon]](https://nbviewer.org/github/Mamiglia/ADM_HW_3/blob/main/main.ipynb)
+
+[Button Icon]: https://img.shields.io/badge/Notebook-EF2D5E?style=for-the-badge&logoColor=white
+
 The purpose of this repository is to answer the assigned questions in the [Homework#3](https://github.com/lucamaiano/ADM/tree/master/2022/Homework_3) of the Algorithms for Data Mining course, 2022.
 
 The data analysis is performed on data scraped from the [Atlas Obscura Website](atlasobscura.com/). The repository consists of the following files:
