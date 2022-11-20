@@ -11,5 +11,6 @@ The data analysis is performed on data scraped from the [Atlas Obscura Website](
   - `metrics.py`: functions useful for evaluating the search engines.
 3. `CommandLine.sh`: a file that provides the answer to the Commmand Line question.
 4. `refined_data` folder: all the TSVs files containig the data scraped from the webpages, also availiable in compact form in `places.tsv`.
-5. `urls.txt`: the urls of the 7200 most popular webpages from Atlas Obscura
+5. `urls.txt`: the urls of the 7200 most popular webpages from Atlas Obscura.
 6. `queries.csv`: a list of some randomized queries, and the results of the search on Atlas Obscura's search engine.
+7. `RankingList.txt`: the output of question 7.
