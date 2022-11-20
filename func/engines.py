@@ -73,7 +73,7 @@ class Engine:
     
 class SimilarityEngine(Engine):
     '''This class represents an improved version of the orginal SimpleEngine, that obtains documents by similarity'''
-    IDF = lambda N, df: np.log(N / df)
+    IDF = lambda N, df: np.log(N / df) + 1
 
     def __init__(self, domain:pd.DataFrame, out_columns:list):
         super().__init__(domain, out_columns)
@@ -103,10 +103,10 @@ class SimilarityEngine(Engine):
 
     def retrieve_doc_vec(self, terms):
         '''Retrieves vector rappresentation of documents given some terms'''
-        doc_vec = defaultdict( lambda: np.zeros((len(terms))) )
-        for d in self.domain.index:
-            for i,t in enumerate(terms.keys()):
-                doc_vec[d][i] = self.matrix[t, d]
+        doc_vec = {}
+        m = self.matrix[sorted(terms.keys()),:].tocsc()
+        for i in m.nonzero()[1]:
+            doc_vec[i] = m.getcol(i).toarray()[:,0]
         return doc_vec
 
     def search(self, query, k=10, all_columns=False):
